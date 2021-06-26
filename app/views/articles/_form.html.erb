@@ -1,0 +1,28 @@
+<center><h1>New Page</h1></center>
+<br />
+<br />
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <%= form_with(model: @article, local: true) do |form| %>
+
+  <div>
+    <%= form.label :Name, class: 'form-label' %><br />
+    <%= form.text_field :name, class:'form-control', placeholder: 'Enter Name'
+    %>
+  </div>
+  <br />
+  <div>
+    <%= form.label :email, class: 'form-label' %><br />
+    <%= form.email_field :email, class: 'form-control', placeholder: 'Enter
+    Email' %>
+  </div>
+
+  <br />
+
+  <div>&nbsp;<%= form.submit class:'btn btn-success' %></div>
+  <br />
+  <% end %>
+</div>
+
+<br />
+<br />
